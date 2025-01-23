@@ -76,3 +76,5 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         @app.route('/')
         def index():
             return <un text>
+
+# 2. Aplicatia flask in director si factory method
