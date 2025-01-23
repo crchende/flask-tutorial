@@ -4,7 +4,7 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 # Cuprins
 
 * [i. Unelte necesare](#i-unelte-necesare)
-* [ii. Executia aplicatie flask](#ii-executia-aplicatie-flask)
+* [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
 1. [Aplicatie simpla cu un fisier - hello.py](#1-aplicatie-simpla-cu-un-fisier)
 
 ### i. Unelte necesare
