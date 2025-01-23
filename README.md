@@ -1,23 +1,13 @@
 # flask-tutorial
 Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
-# Varianta cea mai simpla de aplicatie
-- director de lucru: `flask-tutorial`
-- fisier python care creaza o aplicatie flask: `hello.py`
-  
-        app = Flask(__name__) # argumentul __name__ este pus la dispozitie 
-                              # de Python si reprezinta chiar numele fisierului, 
-                              # fara extensie
+# Cuprins
 
-- aplicatia contine rute care returneaza ce se afiseaza in pagina web
-  
-        @app.route('/')
-        def index():
-            return <un text>
+* [i. Unelte necesare](#i-unelte-necesare)
+* [ii. Executia aplicatie flask](#ii-executia-aplicatie-flask)
+1. [Aplicatie simpla cu un fisier - hello.py](#1-aplicatie-simpla-cu-un-fisier)
 
-
-
-## Unelte care trebuie instalate pentru aplicatia flask:
+### i. Unelte necesare
 - virtual environment - instalat in directorul flask-tutorial
 
         python3 -m venv .venv  # creaza directorul .venv si instaleaza 
@@ -29,7 +19,8 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         pip install flask
 
 
-# Executia aplicatiei flask
+### ii. Executia aplicatiei flask
+[Cuprins](#cuprins)
 
 - din linia de comanda, cu specificarea explicita a aplicatiei: https://flask.palletsprojects.com/en/stable/cli/
 
@@ -69,3 +60,19 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         > $env:FLASK_RUN_PORT = 8000
         > flask run
          * Running on http://127.0.0.1:8000/
+
+# 1. Aplicatie simpla cu un fisier
+[Cuprins](#cuprins)
+
+- director de lucru: `flask-tutorial`
+- fisier python care creaza o aplicatie flask: `hello.py`
+  
+        app = Flask(__name__) # argumentul __name__ este pus la dispozitie 
+                              # de Python si reprezinta chiar numele fisierului, 
+                              # fara extensie
+
+- aplicatia contine rute care returneaza ce se afiseaza in pagina web
+  
+        @app.route('/')
+        def index():
+            return <un text>
