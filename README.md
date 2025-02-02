@@ -5,7 +5,13 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
 * [i. Unelte necesare](#i-unelte-necesare)
 * [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
-1. [Aplicatie simpla cu un fisier - hello.py](#1-aplicatie-simpla-cu-un-fisier)
+- [flask-tutorial](#flask-tutorial)
+- [Cuprins](#cuprins)
+    - [i. Unelte necesare](#i-unelte-necesare)
+    - [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
+- [1. Aplicatie simpla cu un fisier](#1-aplicatie-simpla-cu-un-fisier)
+- [2. Aplicatia in director cu 'application factory'](#2-aplicatia-in-director-cu-application-factory)
+  - [Configurarea aplicatiei in `application factory`](#configurarea-aplicatiei-in-application-factory)
 
 ### i. Unelte necesare
 - virtual environment - instalat in directorul flask-tutorial
@@ -77,4 +83,36 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         def index():
             return <un text>
 
-# 2. Aplicatia flask in director si factory method
+# 2. Aplicatia in director cu 'application factory'
+
+- se creaza directorul `flaskr` - pentru aplicatie.
+- in director se creaza fisierul `__init__.py` care in varianta cea mai simpla are continutul:
+
+        from flask import Flask
+
+        def create_app():
+        app = Flask(__name__) # __name__ = numele modulului python curent
+
+        @app.route('/')
+        def hello():
+                return "SALUT"
+        
+        return app
+
+- `create_app` este 'application factory'. programul `flask` cauta in `__init__.py` si executa aceasta functie daca i se da ca `--app` un director - `flaskr` in cazul de fata. De vazut exemplul de executie a aplicatiei de mai jos.
+
+- in aceste exemplu, in interiorul `application factory` avem definita si ruta si metoda `view` (@app.route ...).
+
+- executia aplicatiei - din terminal, si directorul `flask-tutorial`, directorul parinte al directorului `flaskr`
+  
+        cip@cipasus:~/programare/git/flask-tutorial$ flask --app flaskr run --debug
+         * Serving Flask app 'flaskr'
+         * Debug mode: on
+        WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+         * Running on http://127.0.0.1:5000
+        Press CTRL+C to quit
+         * Restarting with stat
+         * Debugger is active!
+         * Debugger PIN: 879-666-817
+
+## Configurarea aplicatiei in `application factory`
