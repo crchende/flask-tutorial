@@ -64,6 +64,9 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 # 1. Aplicatie simpla cu un fisier
 [Cuprins](#cuprins)
 
+- branch: https://github.com/crchende/flask-tutorial/tree/1-aplicatie-simpla-cu-un-fisier
+- tag:    https://github.com/crchende/flask-tutorial/tree/1-aplicatie-simpla-cu-un-fisier-v1.0.0
+
 - director de lucru: `flask-tutorial`
 - fisier python care creaza o aplicatie flask: `hello.py`
   
