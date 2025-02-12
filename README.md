@@ -76,6 +76,8 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         app = Flask(__name__) # argumentul __name__ este pus la dispozitie 
                               # de Python si reprezinta chiar numele fisierului, 
                               # fara extensie
+                              # Flask trebuie sa stie ce sa importe - i se furnizeaza
+                              # acest lucru prin intermediul parametrului __name__
 
 - aplicatia contine rute care returneaza ce se afiseaza in pagina web
   
@@ -92,7 +94,9 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
         def create_app():
         app = Flask(__name__) # __name__ = numele modulului python curent
-
+                              # in acest caz - chiar directorul 'flaskr'
+                              # care are in el fisierul __init__.py
+        print("__name__ =", __name__) 
         @app.route('/')
         def hello():
                 return "SALUT"
@@ -112,6 +116,7 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
          * Running on http://127.0.0.1:5000
         Press CTRL+C to quit
          * Restarting with stat
+         __name__ =  flaskr
          * Debugger is active!
          * Debugger PIN: 879-666-817
 
