@@ -70,6 +70,9 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 # 1. Aplicatie simpla cu un fisier
 [Cuprins](#cuprins)
 
+- branch: https://github.com/crchende/flask-tutorial/tree/1-aplicatie-simpla-cu-un-fisier
+- tag:    https://github.com/crchende/flask-tutorial/tree/1-aplicatie-simpla-cu-un-fisier-v1.0.0
+
 - director de lucru: `flask-tutorial`
 - fisier python care creaza o aplicatie flask: `hello.py`
   
@@ -85,6 +88,9 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
 # 2. Aplicatia in director cu 'application factory'
 
+- branch: https://github.com/crchende/flask-tutorial/tree/2-aplicatie-in-dir-si-app-factory
+- tag:    https://github.com/crchende/flask-tutorial/tree/2-aplicatie-simpla-cu-un-fisier-v1.0.0
+
 - se creaza directorul `flaskr` - pentru aplicatie.
 - in director se creaza fisierul `__init__.py` care in varianta cea mai simpla are continutul:
 
@@ -92,6 +98,7 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
         def create_app():
         app = Flask(__name__) # __name__ = numele modulului python curent
+        print("__name__ =", __name__)
 
         @app.route('/')
         def hello():
@@ -112,6 +119,7 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
          * Running on http://127.0.0.1:5000
         Press CTRL+C to quit
          * Restarting with stat
+         __name__ = flaskr
          * Debugger is active!
          * Debugger PIN: 879-666-817
 
