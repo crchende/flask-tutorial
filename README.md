@@ -120,3 +120,33 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
          * Debugger PIN: 879-666-817
 
 ## 2.1. Configurarea aplicatiei in `application factory`
+
+
+Continutul fisierului __init__.py din directorul `flaskr`:
+
+    from flask import Flask
+    def create_app():
+        app = Flask(__name__, instance_relative_config=True) 
+        # incarca fisierul de configurare din directorul 'instance', nu din root
+        # fara acest parametru, se va incerca incarcarea config.py din 'flaskr'
+        # cu acesta - din directorul 'instance' care este in afara 'flaskr'
+        print("app.instance_path:", app.instance_path)
+        print("app.root_path:    ", app.root_path)
+    
+        app.config.from_pyfile('config.py', silent=False)
+        print(app.config)
+    
+        return app
+
+In afara directorului `flaskr` am creat directorul `instance`. Apicatia este configurata sa incarce configuratia din directorul `instance` din afara directorului `flaskr`. Avantaju este ca avem configuratia aplicatiei tinuta inr-un director diferit
+
+    cip@cipasus:~/programare/git/flask-tutorial$ flask --app flaskr run
+    app.instance_path: /home/cip/programare/git/flask-tutorial/instance
+    app.root_path:     /home/cip/programare/git/flask-tutorial/flaskr
+    <Config { ... 'X': 1, 'Y': 2}>
+     * Serving Flask app 'flaskr'
+     * Debug mode: off
+    WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+     * Running on http://127.0.0.1:5000
+    Press CTRL+C to quit
+
