@@ -3,12 +3,14 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
 # Cuprins
 
-* [i. Unelte necesare](#i-unelte-necesare)
-* [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
+- [i. Unelte necesare](#i-unelte-necesare)
+
+- [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
 
 - [1. Aplicatie simpla cu un fisier](#1-aplicatie-simpla-cu-un-fisier)
+
 - [2. Aplicatia in director cu 'application factory'](#2-aplicatia-in-director-cu-application-factory)
-  - [Configurarea aplicatiei in `application factory`](#configurarea-aplicatiei-in-application-factory)
+  - [2.1. Configurarea aplicatiei in `application factory`](#configurarea-aplicatiei-in-application-factory)
 
 ### i. Unelte necesare
 - virtual environment - instalat in directorul flask-tutorial
@@ -117,4 +119,4 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
          * Debugger is active!
          * Debugger PIN: 879-666-817
 
-## Configurarea aplicatiei in `application factory`
+## 2.1 Configurarea aplicatiei in `application factory`
