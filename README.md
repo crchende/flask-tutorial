@@ -93,15 +93,15 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
         from flask import Flask
 
         def create_app():
-        app = Flask(__name__) # __name__ = numele modulului python curent
+            app = Flask(__name__) # __name__ = numele modulului python curent
                               # in acest caz - chiar directorul 'flaskr'
                               # care are in el fisierul __init__.py
-        print("__name__ =", __name__) 
-        @app.route('/')
-        def hello():
+            print("__name__ =", __name__) 
+            @app.route('/')
+            def hello():
                 return "SALUT"
         
-        return app
+            return app
 
 - `create_app` este 'application factory'. programul `flask` cauta in `__init__.py` si executa aceasta functie daca i se da ca `--app` un director - `flaskr` in cazul de fata. De vazut exemplul de executie a aplicatiei de mai jos.
 
