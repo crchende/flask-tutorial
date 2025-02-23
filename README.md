@@ -3,11 +3,8 @@ Flaskr tutorial from: https://flask.palletsprojects.com/en/stable/tutorial/
 
 # Cuprins
 
-- [Cuprins](#cuprins)
-
 * [i. Unelte necesare](#i-unelte-necesare)
 * [ii. Executia aplicatiei flask](#ii-executia-aplicatiei-flask)
-- [flask-tutorial](#flask-tutorial)
 
 - [1. Aplicatie simpla cu un fisier](#1-aplicatie-simpla-cu-un-fisier)
 - [2. Aplicatia in director cu 'application factory'](#2-aplicatia-in-director-cu-application-factory)
